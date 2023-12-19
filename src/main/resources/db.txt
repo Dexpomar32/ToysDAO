@@ -1,0 +1,38 @@
+
+CREATE TABLE Jucarii (
+  ID_Jucarie INT AUTO_INCREMENT PRIMARY KEY,
+  Nume_Jucarie VARCHAR(255),
+  Pret DECIMAL(10, 2),
+  Cantitate INT,
+  Tara_Productie VARCHAR(255),
+  Varsta_Minima INT
+);
+
+CREATE TABLE Papusile (
+  ID_Papusa INT AUTO_INCREMENT PRIMARY KEY,
+  ID_Jucarie INT,
+  Material VARCHAR(255),
+  Inaltime DECIMAL(5, 2),
+  FOREIGN KEY (ID_Jucarie) REFERENCES Jucarii(ID_Jucarie)
+);
+
+CREATE TABLE Categorii (
+  ID_Categorie INT AUTO_INCREMENT PRIMARY KEY,
+  Nume_Categorie VARCHAR(255)
+);
+
+CREATE TABLE Jucarii_Categorii (
+  ID_Jucarie_Categorie INT AUTO_INCREMENT PRIMARY KEY,
+  ID_Jucarie INT,
+  ID_Categorie INT,
+  FOREIGN KEY (ID_Jucarie) REFERENCES Jucarii(ID_Jucarie),
+  FOREIGN KEY (ID_Categorie) REFERENCES Categorii(ID_Categorie)
+);
+
+CREATE TABLE Vanzari (
+  ID_Vanzare INT AUTO_INCREMENT PRIMARY KEY,
+  ID_Jucarie INT,
+  Data_Vanzare DATE,
+  Cantitate_Vanduta INT,
+  FOREIGN KEY (ID_Jucarie) REFERENCES Jucarii(ID_Jucarie)
+);

@@ -1,0 +1,36 @@
+INSERT INTO Jucarii (Nume_Jucarie, Pret, Cantitate, Tara_Productie, Varsta_Minima)
+VALUES
+  ('Masina de jucarie', 29.99, 50, 'China', 3),
+  ('Puzzle', 12.50, 100, 'Romania', 4),
+  ('Papusa Barbie', 39.99, 30, 'Statele Unite', 5),
+  ('Set trenulet electric', 49.99, 20, 'Germania', 3),
+  ('Robot Transformers', 34.99, 40, 'Japonia', 6);
+
+INSERT INTO Papusile (ID_Jucarie, Material, Inaltime)
+VALUES
+  (1, 'Plastic', 12.5),
+  (3, 'Material textil', 18.0),
+  (4, 'Plastic', 9.5);
+
+INSERT INTO Categorii (Nume_Categorie)
+VALUES
+  ('Vehicule'),
+  ('Puzzle'),
+  ('Papusi'),
+  ('Jocuri de constructie');
+
+INSERT INTO Jucarii_Categorii (ID_Jucarie, ID_Categorie)
+VALUES
+  (1, 1),
+  (2, 2),
+  (3, 3),
+  (4, 1),
+  (5, 1);
+
+INSERT INTO Vanzari (ID_Jucarie, Data_Vanzare, Cantitate_Vanduta)
+VALUES
+  (1, '2023-10-01', 10),
+  (2, '2023-10-02', 5),
+  (3, '2023-10-03', 8),
+  (4, '2023-10-04', 15),
+  (5, '2023-10-05', 12);
