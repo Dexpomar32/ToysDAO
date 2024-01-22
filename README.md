@@ -35,4 +35,4 @@ ToysDAO is a Java project that provides a simple and efficient way to manage toy
 
 ## Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests to improve MailBridge.
+Contributions are welcome! Feel free to open issues or submit pull requests to improve ToysDAO.
